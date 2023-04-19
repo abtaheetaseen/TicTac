@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: black;
+    color: beige;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12vh;
+    font-size: 30px;
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+.gameContainer {
+    background-color: rgb(190, 190, 190);
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height: 78vh;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 50px;
+    position: relative;
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: rgb(194, 160, 226);
+    cursor: pointer;
+}
+
+.gameInfo {
+    padding: 0 34px;
+    font-family: 'Tilt Prism', cursive;
+
+    margin-top: 40px;
+}
+
+.imgBox img {
+    width: 0;
+    transition: 1s ease-in-out;
+    margin-top: 10px;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+.info {
+    font-size: 25px;
+}
+
+#reset {
+    margin: 0 23px;
+    padding: 6px 14px;
+    background: #e2b8b8;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bolder;
+}
+
+#reset:hover {
+    background: transparent;
+}
+
+.line {
+    background-color: rgb(85, 0, 0);
+    height: 3px;
+    width: 0;
+    position: absolute;
+    transition: 1s ease-in-out;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    .gameContainer {
+        flex-wrap: wrap;
+    }
+
+    .gameInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -100px;
+    }
+
+    .gameInfo h1 {
+        text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .container {
+        grid-template-rows: repeat(3, 18vw);
+        grid-template-columns: repeat(3, 18vw);
+    }
+
+    .line {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        grid-template-rows: repeat(3, 11vw);
+        grid-template-columns: repeat(3, 11vw);
+    }
+
+    
+}
